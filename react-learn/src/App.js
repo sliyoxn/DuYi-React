@@ -4,12 +4,10 @@ import withLog from "./HOC/withLog";
 let AComp = withLog(A);
 export default class App extends React.Component {
     myRef = React.createRef();
-
     componentDidMount() {
         console.log(this.myRef);
     }
-    
-    
+
     render() {
         return (
             <div>
