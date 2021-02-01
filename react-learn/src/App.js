@@ -18,10 +18,6 @@ function ChildB() {
 
 export default function App() {
     return (
-        <div className="app" onClick={e => {
-            console.log("App被点击了", e.target)
-        }}>
-            <h1>App</h1>
             <ChildA />
         </div>
     )
