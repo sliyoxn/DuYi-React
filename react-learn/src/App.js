@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
 function Item(props) {
-    // console.log("Item Render " + props.value);
     return <li>{props.value}</li>
 }
 
@@ -15,11 +14,7 @@ export default function App() {
             list.push(<Item key={i} value={i}></Item>)
         }
         return list;
-    }, [range.min, range.max])
-    // const list = [];
-    // for (let i = range.min; i <= range.max; i++) {
-    //     list.push(<Item key={i} value={i}></Item>)
-    // }
+    }, [range.min, range.max]);
     return (
         <div>
             <ul>
