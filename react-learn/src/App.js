@@ -1,9 +1,8 @@
 import React, { useState, useCallback } from 'react'
 
-class Test extends React.PureComponent {
-
+class Child extends React.PureComponent {
     render() {
-        console.log("Test Render")
+        console.log("Child Render")
         return <div>
             <h1>{this.props.text}</h1>
             <button onClick={this.props.onClick}>改变文本</button>
@@ -21,8 +20,7 @@ function Parent() {
 
     return (
         <div>
-            {/* 函数的地址每次渲染都发生了变化，导致了子组件跟着重新渲染，若子组件是经过优化的组件，则可能导致优化失效 */}
-            <Test text={txt} onClick={handleClick} />
+            <Child text={txt} onClick={handleClick} />
             <input type="number"
                 value={n}
                 onChange={e => {
