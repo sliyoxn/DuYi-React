@@ -30,7 +30,7 @@ export default function App() {
     return (
         <Router>
             <Route path="/a" component={A} />
-            <Route path="/a/b" component={B} />
+            <Route path="/b" component={B} />
             <Route component={C} />
         </Router>
     )
